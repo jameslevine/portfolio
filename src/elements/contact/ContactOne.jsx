@@ -21,7 +21,7 @@ class ContactOne extends Component{
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "enquiry", ...this.state })
+          body: encode({ "form-name": "contact", ...this.state })
         })
           .then(() => alert("Success!"))
           .catch(error => alert(error));
@@ -41,7 +41,8 @@ class ContactOne extends Component{
                             </div>
                             <div className="form-wrapper">
 
-                                <form name="contact" data-netlify="true" >
+                                <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
+                                <input type="hidden" name="form-name" value="contact" />
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
