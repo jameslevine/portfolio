@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
 class ContactOne extends Component{
     constructor(props){
         super(props);
@@ -10,6 +16,19 @@ class ContactOne extends Component{
             rnMessage: '',
         };
     }
+
+    handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...this.state })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
+  
+        e.preventDefault();
+      };
+
     render(){
         return(
             <div className="contact-form--1">
@@ -22,7 +41,7 @@ class ContactOne extends Component{
                             </div>
                             <div className="form-wrapper">
 
-                                <form name="contact" method="POST" action="/" data-netlify="true" enctype="application/x-www-form-urlencoded" >
+                                <form onSubmit={this.handleSubmit} >
                                 <input type="hidden" name="form-name" value="contact" />
                                     <label htmlFor="item01">
                                         <input
