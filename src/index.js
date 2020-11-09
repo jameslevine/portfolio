@@ -10,7 +10,6 @@ import './index.scss';
 
 
 // Home layout
-import Demo from './page-demo/Demo';
 import MainDemo from './home/MainDemo';
 import Startup from './home/Startup';
 import Paralax from './home/Paralax';
