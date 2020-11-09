@@ -69,7 +69,7 @@ class ContactOne extends Component{
                                             placeholder="Your Message"
                                         />
                                     </label>
-                                    <button className="rn-button-style--2 btn-solid" type="submit" value="submit" name="submit" id="mc-embedded-subscribe">Submit</button>
+                                    <button className="rn-button-style--2 btn-solid" type="submit" id="mc-embedded-subscribe">Submit</button>
                                 </form>
                             </div>
                         </div>
