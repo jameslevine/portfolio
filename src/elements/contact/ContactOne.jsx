@@ -14,7 +14,7 @@ class ContactOne extends Component{
             email: '',
             subject: '',
             message: '',
-            success: 'Message successfully sent!',
+            success: '',
         };
     }
 
@@ -32,7 +32,7 @@ class ContactOne extends Component{
             email: '',
             subject: '',
             message: '',
-            success: '',
+            success: 'Message successfully sent!',
           }))
           .catch(error => alert(error));
   
