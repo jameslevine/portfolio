@@ -22,7 +22,7 @@ class ContactOne extends Component{
                             </div>
                             <div className="form-wrapper">
 
-                                <form name="contact" method="POST" data-netlify="true">
+                                <form name="contactUsForm" method="POST" data-netlify="true">
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
