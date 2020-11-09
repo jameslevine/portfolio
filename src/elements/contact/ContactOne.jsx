@@ -14,7 +14,6 @@ class ContactOne extends Component{
             email: '',
             subject: '',
             message: '',
-            success: ''
         };
     }
 
@@ -24,13 +23,7 @@ class ContactOne extends Component{
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...this.state })
         })
-          .then(() => this.setState({
-            name: '',
-            email: '',
-            subject: '',
-            message: '',
-            success: 'Message successfully sent!',
-        }))
+          .then(() => console.log(this.state))
           .catch(error => alert(error));
   
         e.preventDefault();
@@ -99,7 +92,6 @@ class ContactOne extends Component{
                                         />
                                     </label>
                                     <button className="rn-button-style--2 btn-solid" type="submit" id="mc-embedded-subscribe">Submit</button>
-                                    <div class="text"><p>{this.state.success}</p></div>
                                 </form>
                             </div>
                         </div>
