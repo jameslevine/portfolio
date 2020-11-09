@@ -10,10 +10,10 @@ class ContactOne extends Component{
     constructor(props){
         super(props);
         this.state = {
-            rnName: '',
-            rnEmail: '',
-            rnSubject: '',
-            rnMessage: '',
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
         };
     }
 
@@ -23,11 +23,13 @@ class ContactOne extends Component{
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...this.state })
         })
-          .then(() => alert("Success!"))
+          .then(() => console.log(this.state))
           .catch(error => alert(error));
   
         e.preventDefault();
       };
+
+      handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
     render(){
         return(
@@ -42,15 +44,15 @@ class ContactOne extends Component{
                             <div className="form-wrapper">
 
                                 <form name="contact" data-netlify="true" onSubmit={this.handleSubmit}>
-                                <input type="hidden" name="form-name" value="contact" />
+                                {/* <input type="hidden" name="form-name" value="contact" /> */}
                                     <label htmlFor="item01">
                                         <input
                                             type="text"
                                             name="name"
                                             required
                                             id="item01"
-                                            value={this.state.rnName}
-                                            onChange={(e)=>{this.setState({rnName: e.target.value});}}
+                                            value={this.state.name}
+                                            onChange={this.handleChange}
                                             placeholder="Your Name *"
                                         />
                                     </label>
@@ -61,8 +63,8 @@ class ContactOne extends Component{
                                             name="email"
                                             required
                                             id="item02"
-                                            value={this.state.rnEmail}
-                                            onChange={(e)=>{this.setState({rnEmail: e.target.value});}}
+                                            value={this.state.email}
+                                            onChange={this.handleChange}
                                             placeholder="Your email *"
                                         />
                                     </label>
@@ -73,8 +75,8 @@ class ContactOne extends Component{
                                             required
                                             name="subject"
                                             id="item03"
-                                            value={this.state.rnSubject}
-                                            onChange={(e)=>{this.setState({rnSubject: e.target.value});}}
+                                            value={this.state.subject}
+                                            onChange={this.handleChange}
                                             placeholder="Write a Subject"
                                         />
                                     </label>
@@ -84,8 +86,8 @@ class ContactOne extends Component{
                                             id="item04"
                                             required
                                             name="message"
-                                            value={this.state.rnMessage}
-                                            onChange={(e)=>{this.setState({rnMessage: e.target.value});}}
+                                            value={this.state.message}
+                                            onChange={this.handleChange}
                                             placeholder="Your Message"
                                         />
                                     </label>
