@@ -15,9 +15,9 @@ class Footer extends Component{
                             <div className="col-lg-6">
                                 <div className="footer-left">
                                     <div className="inner">
-                                        <span>Ready To Do This</span>
-                                        <h2>Let's get <br /> to work</h2>
-                                        <a className="rn-button-style--2" href="/contact">
+                                        <span>Need my services?</span>
+                                        <h2>Send me <br /> a message</h2>
+                                        <a className="rn-button-style--2" href="/#contact">
                                             <span>Contact Us</span>
                                         </a>
                                     </div>
@@ -29,11 +29,11 @@ class Footer extends Component{
                                         {/* Start Single Widget  */}
                                         <div className="col-lg-6 col-sm-6 col-12">
                                             <div className="footer-link">
-                                                <h4>Quick Link</h4>
+                                                <h4>Quick Links</h4>
                                                 <ul className="ft-link">
-                                                    <li><a href="/portfolio">Work</a></li>
-                                                    <li><a href="/about">About</a></li>
-                                                    <li><a href="/contact">Let's Talk</a></li>
+                                                    <li><a href="/">Home</a></li>
+                                                    <li><a href="/#about">About</a></li>
+                                                    <li><a href="/#contact">Contact</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -43,8 +43,8 @@ class Footer extends Component{
                                             <div className="footer-link">
                                                 <h4>Say Hello</h4>
                                                 <ul className="ft-link">
-                                                    <li><a href="mailto:admin@example.com">admin@example.com</a></li>
-                                                    <li><a href="mailto:hr@example.com">hr@example.com</a></li>
+                                                    <li><a href="mailto:admin@example.com">jamesalexanderlevine@gmail.com</a></li>
+                                                    <li><a href="tel:">+44 (0) 7590 060 709</a></li>
                                                 </ul>
 
                                                 <div className="social-share-inner">
