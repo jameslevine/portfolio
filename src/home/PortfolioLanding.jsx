@@ -18,7 +18,7 @@ const SlideList = [
         title: 'Hello, I’m <span>James</span>. Full-stack working from London, UK.',
         description: 'I specialise in full stack projects, focusing on React, Node.js and AWS.',
         buttonText: 'Download CV',
-        buttonLink: 'https://drive.google.com/file/d/1DBPuPsCPWP8C5E8vNIqrriJw4twun23Y/view?usp=sharing'
+        buttonLink: 'https://drive.google.com/file/d/18E-El7D2nX5tGmDDtK6AytRY8BdagaBF/view?usp=sharing'
     }
 ]
 const PortfolioLanding = () => {
