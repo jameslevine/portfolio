@@ -56,7 +56,7 @@ class TabsTwo extends Component{
 - Responsible for new features, bug triage and liaising with product and design teams.<br/> - Unit, integration and e2e tests written using Cypress, React Testing Library and Jest. <br/> - Developed feature presented by Ticketmaster International President at annual summit.
                                                </li>
                                                <li>
-                                               <span> <strong>Boardingware (Sep. 2017 - Sep. 2018)</strong> - Development</span><br/>  Agile Ed-tech SaaS start-up providing tracking software to boarding schools.<br/> - Responsible for EMEA regional sales, working with engineers on upcoming features.
+                                               <span> <strong>Boardingware (Sep. 2017 - Sep. 2018)</strong> - Head of Sales EMEA</span><br/>  Agile Ed-tech SaaS start-up providing tracking software to boarding schools.<br/> - Responsible for EMEA regional sales, working with engineers on upcoming features.
                                                </li>
                         
                                            </ul>
