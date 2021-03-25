@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+import emailjs from "emailjs-com";
 
 class ContactOne extends Component {
   constructor(props) {
@@ -19,22 +14,27 @@ class ContactOne extends Component {
   }
 
   handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({
-        "form-name": "contact",
-        name: this.state.name,
-        email: this.state.email,
-        subject: this.state.subject,
-        message: this.state.message,
-      }),
-    })
+    const templateParams = {
+      from_name: this.state.name,
+      email_address: this.state.email,
+      reply_to: this.state.email,
+      phone: this.state.phone,
+      subject: this.state.subject,
+      message_body: this.state.message,
+    };
+    emailjs
+      .send(
+        "service_588piud",
+        "template_1upurof",
+        templateParams,
+        "user_jgKWfixrI8SFpLJqQc7pf"
+      )
       .then(() =>
         this.setState({
           name: "",
           email: "",
           subject: "",
+          phone: "",
           message: "",
           success: "Message successfully sent!",
         })
@@ -68,7 +68,6 @@ class ContactOne extends Component {
                 <form
                   name="contact"
                   data-netlify="true"
-                  method="post"
                   onSubmit={this.handleSubmit}
                 >
                   <input type="hidden" name="form-name" value="contact" />
@@ -92,6 +91,17 @@ class ContactOne extends Component {
                     value={this.state.email}
                     onChange={this.handleChange}
                     placeholder="Your email *"
+                  />
+
+                  <label htmlFor="item05"></label>
+                  <input
+                    type="tel"
+                    name="phone"
+                    required
+                    id="item05"
+                    value={this.state.phone}
+                    onChange={this.handleChange}
+                    placeholder="Your phone *"
                   />
 
                   <label htmlFor="item03"></label>
