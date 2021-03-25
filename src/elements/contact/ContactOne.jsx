@@ -68,9 +68,10 @@ class ContactOne extends Component {
                 <form
                   name="contact"
                   data-netlify="true"
+                  method="post"
                   onSubmit={this.handleSubmit}
                 >
-                  {/* <input type="hidden" name="form-name" value="contact" /> */}
+                  <input type="hidden" name="form-name" value="contact" />
                   <label htmlFor="item01"></label>
                   <input
                     type="text"
