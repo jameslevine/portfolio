@@ -16,9 +16,9 @@ const SlideList = [
         textPosition: 'text-left',
         category: 'Full-Stack Developer',
         title: 'Hello, I’m <span>James</span>. Full-stack working from London, UK.',
-        description: 'I specialise in full stack projects, focusing on React, Node.js and AWS.',
+        description: 'I specialise in full stack projects, focusing on React, React-Native, Node.js and AWS.',
         buttonText: 'Download CV',
-        buttonLink: 'https://drive.google.com/file/d/18E-El7D2nX5tGmDDtK6AytRY8BdagaBF/view?usp=sharing'
+        buttonLink: 'https://drive.google.com/file/d/1sv1lsu7wXt4MsL447Sz8qFCwXWcU_hHo/view?usp=sharing'
     }
 ]
 const PortfolioLanding = () => {
