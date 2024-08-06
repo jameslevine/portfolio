@@ -51,7 +51,7 @@ class TabsTwo extends Component {
                             <strong>
                               AWS (Amazon Web Services (Oct. 2022 - present)
                             </strong>
-                            - Software Development Engineer
+                            <br />- Software Development Engineer
                           </span>
                           <br />
                           Senior Software Engineer working with React,
@@ -78,8 +78,10 @@ class TabsTwo extends Component {
                         <li>
                           <span>
                             {" "}
-                            <strong>Reach Plc (May. 2021 - Oct. 2022)</strong>-
-                            Full-stack Developer{" "}
+                            <strong>
+                              Reach Plc (May. 2021 - Oct. 2022)
+                            </strong>{" "}
+                            <br />- Full-stack Developer{" "}
                           </span>
                           <br />
                           The UK's largest regional and national newspaper
